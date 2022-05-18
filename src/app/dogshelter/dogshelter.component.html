@@ -1,0 +1,167 @@
+<header>
+  <h1>Dog Shelter</h1>
+</header>
+<!-- <ul class="nav nav-tabs" id="myTab" role="tablist" style="justify-content: center;">
+  <li class="nav-item" role="presentation">
+    <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">DogShelter</button>
+  </li>
+  <li class="nav-item" role="presentation">
+    <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Tables oF Records</button>
+  </li>
+</ul> -->
+
+
+<!--
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+
+    <main>
+      <form id="shelter_form" class="form_class" [formGroup]="myform" >
+          <div class="form_div">
+
+              <div>
+              <label>Name of Dog:</label>
+              <input id="pass" class="field_class" formControlName="name"  type="text" placeholder="Dog Name">
+              <span *ngIf="myform.controls['name'].dirty && myform.hasError('required','name')" >Enter Dog Name</span></div>
+              <div>
+              <label>Bread:</label>
+              <input class="field_class" type="text" formControlName="bread"  placeholder="Bread" >
+              <span  *ngIf="myform.controls['bread'].dirty && myform.hasError('required','bread')">enter Bread </span></div>
+              <div>
+              <label>Quality:</label>
+              <input class="field_class" type="text" formControlName="quality"  placeholder="Dog Quality" >
+              <span  *ngIf="myform.controls['quality'].dirty && myform.hasError('required','quality')">enter Quality </span></div>
+              <div>
+              <label>Gender:</label>
+              <input class="field_class" type="text" formControlName="gender"  placeholder="Gender" >
+              <span  *ngIf="myform.controls['gender'].dirty && myform.hasError('required','gender')">enter Gender </span></div>
+              <button class="submit_class" type="submit"  (click)="add()">Add</button>
+              <button class="submit_class" type="submit"  (click)="update()">update</button>
+          </div>
+
+      </form>
+    </main>
+
+  </div>
+
+
+
+
+
+    <div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+
+      <main>
+        <form id="shelter_form" class="form_class" [formGroup]="myform" >
+            <div class="form_div">
+
+              <table class="table" >
+                <tr>
+                <th>ID</th>
+                <th>Dogs Name</th>
+                <th>Bread</th>
+                <th>Quality</th>
+                <th>Gender</th>
+                <th>Edit</th>
+                </tr>
+                <tr *ngFor="let coll of dogsheltercollection ">
+                  <td>{{coll.id}}</td>
+                  <td>{{coll.name}}</td>
+                  <td>{{coll.bread}}</td>
+                  <td>{{coll.quality}}</td>
+                  <td>{{coll.gender}}</td>
+                  <button class="btn btn-success p-1 m-1" (click)="editdog(coll)" >edit</button>
+                  <button class="btn btn-danger p-1 m-1" (click)="deletedog(coll)">delete</button>
+
+                  </tr>
+              </table>
+
+              </div>
+              </form>
+              </main>
+    </div>
+      </div> -->
+
+      <div class="container-fluid">
+                                                              <!-- pura container k liye -->
+        <!-- <div class="row">                                        row bnaye n udhr col-md -3 tak use kiye -->
+          <div class="col-md-3">
+            <div class="card m-2 p-3">
+                                                  <!-- card bnaya pading n margin diya with body -->
+              <div class="card-body">
+                <h5 class="card-title">Dog Form</h5>
+                <h6 class="card-subtitle mb-2 text-muted">Please fill complete form</h6>
+                <form [formGroup]="myform" >
+                  <div class="form_div">
+
+                      <div>
+                      <label>Name of Dog:</label>
+                      <input id="pass" class="field_class" formControlName="name"  type="text" placeholder="Dog Name">
+                      <span *ngIf="myform.controls['name'].dirty && myform.hasError('required','name')" >Enter Dog Name</span></div>
+                      <div>
+                      <label>Bread:</label>
+                      <input class="field_class" type="text" formControlName="bread"  placeholder="Bread" >
+                      <span  *ngIf="myform.controls['bread'].dirty && myform.hasError('required','bread')">enter Bread </span></div>
+                      <div>
+                      <label>Quality:</label>
+                      <input class="field_class" type="text" formControlName="quality"  placeholder="Dog Quality" >
+                      <span  *ngIf="myform.controls['quality'].dirty && myform.hasError('required','quality')">enter Quality </span></div>
+                      <div>
+                      <label>Gender:</label>
+                      <input class="field_class" type="text" formControlName="gender"  placeholder="Gender" >
+                      <span  *ngIf="myform.controls['gender'].dirty && myform.hasError('required','gender')">enter Gender </span></div>
+
+                  </div>
+
+              </form>
+                <button (click)="add()" class="btn btn-primary p-1 m-1">Add</button>
+                <button (click)="update()" class="btn btn-success p-1 m-1">Update</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-9">
+            <div class="container-fluid">
+              <div class="card p-3 m-3">
+                <div class="card-body">
+                  <h3 class="card-title p-2">Dog List</h3>
+                  <table class="table" >
+                    <tr>
+                    <th>ID</th>
+                    <th>Dogs Name</th>
+                    <th>Bread</th>
+                    <th>Quality</th>
+                    <th>Gender</th>
+                    <th>Edit</th>
+                    </tr>
+                    <tr *ngFor="let coll of dogsheltercollection ">
+                      <td>{{coll.id}}</td>
+                      <td>{{coll.name | uppercase}}</td>
+                      <td>{{coll.bread}}</td>
+                      <td>{{coll.quality}}</td>
+                      <td>{{coll.gender | currency}}</td>
+                      <button class="btn btn-success p-1 m-1" (click)="editdog(coll)" >edit</button>
+                      <button class="btn btn-danger p-1 m-1" (click)="deletedog(coll)">delete</button>
+
+                      </tr>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+     
+        <h3 >my email:-</h3><input appCustom type="text"  >
+
+
+
+
+
+
+
+
+
+
+
+
+

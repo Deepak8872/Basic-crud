@@ -1,0 +1,15 @@
+const records = [
+  {name : 'deepak' , age:22},
+  {name :'mohit' , age:20},
+  {name : 'dad' , age :56},
+  {name : 'mom' , age :50},
+  {name : 'suzi' , age :3},
+  {name : 'pooja' , age :28},
+  {name : 'jyoti' , age :25}
+
+]
+
+const coll = records.filter((record)=>{
+  return record.age<=30;
+})
+

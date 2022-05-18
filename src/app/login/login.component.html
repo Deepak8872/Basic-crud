@@ -1,0 +1,28 @@
+
+
+
+  <header>
+      <h1>Lets Login</h1>
+  </header>
+  <main>
+      <form id="login_form" class="form_class" [formGroup]="loginform" >
+          <div class="form_div">
+            <div>
+              <label>Login:</label>
+              <input class="field_class" formControlName="username"  type="text" placeholder="username" >
+              <span class="red" *ngIf="loginform.controls['username'].dirty && loginform.hasError('required','username')" >enter username</span>
+              </div>
+              <div>
+              <label>Password:</label>
+              <input id="pass" class="field_class" formControlName="password" type="password" placeholder="password">
+              <span class="red" *ngIf="loginform.controls['password'].dirty && loginform.hasError('required','password')" >enter password</span>
+              </div>
+              <button class="submit_class" type="submit" form="login_form" (click)="Login()">Login</button>
+          </div>
+          <div class="info_div">
+              <a routerLink="/signup">New User? Click To Signup!!</a>
+          </div>
+      </form>
+  </main>
+
+

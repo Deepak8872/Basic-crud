@@ -1,0 +1,35 @@
+<header>
+  <h1>Lets Signin</h1>
+</header>
+<main>
+  <form id="signin_form" class="form_class" [formGroup]="signupform" >
+      <div class="form_div">
+        <div >
+          <label>UserName:</label>
+          <input class="field_class"  formControlName="username" type="text" placeholder="UserName" >
+          <span class="red" *ngIf="signupform.controls['username'].dirty && signupform.hasError('required','username') " >enter username</span>
+        </div>
+        <div>
+          <label>LastName:</label>
+          <input class="field_class" formControlName="lastname" type="text" placeholder="LastName" >
+          <span class="red" *ngIf="signupform.controls['lastname'].dirty && signupform.hasError('required','lastname') " >enter lastname</span>
+        </div>
+        <div>
+          <label>PhoneNumber:</label>
+          <input class="field_class" formControlName="phonenumber" type="number" placeholder="PhoneNumber" >
+          <span class="red" *ngIf="signupform.controls['phonenumber'].dirty && signupform.hasError('required','phonenumber') " >enter phonenumber</span>
+        </div>
+        <div>
+          <label>Password:</label>
+          <input id="pass" class="field_class" formControlName="password" type="password" placeholder="password">
+          <span class="red" *ngIf="signupform.controls['password'].dirty && signupform.hasError('required','password') " >enter password</span>
+        </div>
+          <button class="submit_class" type="submit" form="login_form" (click)="Signup()">Signup</button>
+      </div>
+      <div class="info_div">
+          <a routerLink="/signup">Already Acount? Click To Login!!</a>
+      </div>
+  </form>
+</main>
+
+

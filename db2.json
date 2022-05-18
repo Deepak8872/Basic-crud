@@ -1,0 +1,76 @@
+{
+  "Records": [
+    {
+      "id": 9,
+      "name": "suzi",
+      "bread": "w",
+      "quality": "w",
+      "gender": "Female"
+    },
+    {
+      "id": 10,
+      "name": "sheeru",
+      "bread": "street",
+      "quality": "good",
+      "gender": "femail"
+    },
+    {
+      "id": 11,
+      "name": "rani",
+      "bread": "street",
+      "quality": "2 good",
+      "gender": "femail"
+    },
+    {
+      "id": 12,
+      "name": "gunnga",
+      "bread": "outside",
+      "quality": "good",
+      "gender": "male"
+    }
+  ],
+  "Signup": [
+    {
+      "firstname": "",
+      "lastname": "",
+      "phonenumber": 0,
+      "password": 0,
+      "id": 1
+    },
+    {
+      "firstname": "",
+      "lastname": "",
+      "phonenumber": 0,
+      "password": 0,
+      "id": 2
+    },
+    {
+      "username": "",
+      "lastname": "",
+      "phonenumber": 0,
+      "password": 0,
+      "id": 3
+    },
+    {
+      "username": "deepak",
+      "lastname": "singh",
+      "phonenumber": 99889,
+      "password": "1234",
+      "id": 4
+    },
+    {
+      "username": "Roshanlal",
+      "lastname": "Singh",
+      "phonenumber": 9833110665,
+      "password": "112233",
+      "id": 5
+    },
+    {
+      "username": "Deepak ",
+      "lastname": "Singh",
+      "phonenumber": 99887766,
+      "password": "123456",
+      "id": 6
+    }
+  ]
+}
